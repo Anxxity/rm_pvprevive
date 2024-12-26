@@ -35,6 +35,13 @@ function startReviveProcess()
 end
 
 function revivePlayer()
+    local pped = playerpedid()
+    li.hideTextUI() --hiding lib
+    ResurrectPed(pped)
+    SetEntityHealth(pped,200)
+    clearPedBloodDamage(pped)
+    ClearPedTasks(pped)
+    isDead = false
 end
 
 --anti wipping added for pvp 
