@@ -1,7 +1,6 @@
 
 local isDead = false
 local isInvincible = false
-local config = {}
 local alphaClients = {}
 
 -- Main thread to monitor player death
@@ -49,7 +48,7 @@ end
 -- Handle the revive process
 function startReviveProcess()
     local success = lib.progressBar({
-        duration = config.produration, 
+        duration = Config.produration, 
         position = 'bottom',
         useWhileDead = true,
         canCancel = false,
@@ -67,7 +66,7 @@ function startReviveProcess()
                 color = 'white'
             }
         })
-        lib.timer(config.produration, revivePlayer, true)
+        lib.timer(Config.produration, revivePlayer, true)
     end
 end
 
@@ -91,7 +90,7 @@ function enableTemporaryInvincibility(playerPed)
     isInvincible = true
 
     ExecuteCommand("alpha")
-    Citizen.SetTimeout(config.invtime, function()
+    Citizen.SetTimeout(Config.invtime, function()
         SetEntityInvincible(playerPed, false)
         isInvincible = false
     end)
@@ -103,7 +102,7 @@ RegisterNetEvent('alphaClients', function(author, enable)
     if enable then
         SetEntityAlpha(targetPed, 102, false)
         alphaClients[author] = targetPed
-        Citizen.SetTimeout(config.invtime, function()
+        Citizen.SetTimeout(Config.invtime, function()
             ResetEntityAlpha(targetPed)
             alphaClients[author] = nil
         end)

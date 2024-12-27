@@ -1,5 +1,4 @@
-config = {
+Config = {}
 
-   produration = 3000 ,-- in ms
-   invtime = 5000 -- in ms 
-}
+Config.produration = 3000 -- in ms
+Config.invtime = 5000 -- in ms 
