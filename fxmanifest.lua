@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game "gta5"
 
 author "Remin Moahmmed"
-description 'A Bot revive System for pvp'
+description 'A revive System for pvp'
 lua54 'yes'
 
 
@@ -12,5 +12,10 @@ client_script {
 }
 
 server_script {
-    "server.lua",
+    'server.lua'
+}
+
+shared_scripts {
+    '@ox_lib/init.lua',
+    'config.lua'
 }
