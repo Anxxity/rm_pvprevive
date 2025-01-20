@@ -4,25 +4,6 @@ local isInvincible = false
 local alphaClients = {}
 
 -- Main thread to monitor player death
---[[Citizen.CreateThread(function()
-    while true do
-        local playerPed = PlayerPedId()
-        if IsPedDeadOrDying(playerPed, true) then
-            if not isDead then
-                isDead = true
-                Citizen.Wait(2000)
-                if IsPedDeadOrDying(playerPed, true) then
-                    showReviveUI()
-                end
-            end
-        elseif isDead then
-            isDead = false
-            lib.hideTextUI()
-        end
-        Citizen.Wait(500)
-    end
-end)]]
-
 Citizen.CreateThread(function()
     while true do
         local playerPed = PlayerPedId()
