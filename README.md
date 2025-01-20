@@ -21,5 +21,5 @@ Adjust invincibility duration or disable features as needed.
 # Dependencies:
 
 ox_lib for UI elements and utility functions.
-Compatible with ESX framework (esx_status event is used).
+
 
