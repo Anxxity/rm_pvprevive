@@ -46,7 +46,7 @@ end)
 -- Listen for the response from the server
 RegisterNetEvent('get_bucket_response')
 AddEventHandler('get_bucket_response', function(routingBucket)
-    if routingBucket == 0 then
+    if routingBucket == Config.bucket then
         showReviveUI()
     end
 end)
