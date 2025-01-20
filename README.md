@@ -6,7 +6,7 @@ This script provides a customizable player revive system for FiveM servers. It d
 
 # Features:
 
-*only work in bucket 0*
+*only work in bucket 0*/n
 Automatically identifies when a player is dead or dying and triggers the revive interface.
 Displays a text-based interface prompting the player to revive by pressing a key ([E] - Revive).
 Temporary Invincibility: Players are invincible for a brief duration post-revival to prevent immediate harm.
