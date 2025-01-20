@@ -98,7 +98,7 @@ function enableTemporaryInvincibility(playerPed)
     SetEntityInvincible(playerPed, true)
     isInvincible = true
 
-    ExecuteCommand("alpha")
+    ExecuteCommand("alpha") -- lol
     Citizen.SetTimeout(Config.invtime, function()
         SetEntityInvincible(playerPed, false)
         isInvincible = false
